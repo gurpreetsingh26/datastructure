@@ -1,0 +1,40 @@
+
+def sort(arr):
+    """
+    Selection sort
+    :param arr:
+    :return:
+    """
+    if len(arr) <= 1:
+        return arr
+
+    for i in range(len(arr)):
+        min = i
+        for j in range(i+1, len(arr)):
+            if arr[min] > arr[j]:
+                min = j
+        arr[i], arr[min] = arr[min], arr[i]
+
+    return arr
+
+
+def test():
+    """
+    Test sorting
+    :return:
+    """
+
+    arr = [2,1,8,0,-12,12]
+    sorted_arr = sort(arr)
+
+    if arr == sorted_arr:
+        print "Works as expected"
+    else:
+        print sorted_arr
+        print "Check for logic"
+
+
+if __name__ == '__main__':
+    test()
+
+
