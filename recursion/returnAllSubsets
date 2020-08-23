@@ -1,0 +1,28 @@
+
+def sol(s):
+
+    def recursion(inp, idx, so_far, result):
+
+        if idx == len(inp):
+            result.append(so_far)
+        else:
+            recursion(inp, idx + 1, so_far, result)
+            new_so_far = so_far.copy()
+            new_so_far.append(inp[idx])
+            recursion(inp, idx + 1, new_so_far, result)
+
+    output = []
+    initial = []
+    recursion(s, 0, initial, output)
+    return output
+
+
+def test():
+    s = "123"
+    result = sol(s)
+    print(result)
+
+
+if __name__ == '__main__':
+    test()
+
