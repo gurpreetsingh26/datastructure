@@ -1,0 +1,11 @@
+
+def sol(arr):
+    """
+
+    :param arr:
+    :return:
+    """
+    start = 0;
+    end = len(arr)
+    def re
+
